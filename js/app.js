@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['$strap.directives']).
+angular.module('app', ['google-maps', '$strap.directives']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.
             when('/', {templateUrl: 'home.html', controller: HomeCtrl}).
