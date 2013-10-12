@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +19,14 @@
     </head>
     <body>
         <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">Lut Vanheusden</h3>
+            <div ng-controller="NavCtrl">
+                <div class="header" bs-navbar>
+                    <ul class="nav nav-pills pull-right">
+                        <li data-match-route="/"><a href="#/">Home</a></li>
+                        <li data-match-route="/contact"><a href="#/contact">Contact</a></li>
+                    </ul>
+                    <h3 class="text-muted">Lut Vanheusden</h3>
+                </div>
             </div>
 
             <div class="jumbotron">
@@ -36,67 +38,23 @@
                 </p>
             </div>
 
-            <div class="row marketing">
-                <div class="row featurette">
-                    <div class="col-md-7">
-                    <h2 class="featurette-heading">
-                        Post- en prenatale
-                        <span class="text-muted">
-                            &#8212 behandelingen voor na zwangerschap
-                        </span>
-                    </h2>
-                    <p class="lead">
-                        Donec ullamcorper nulla non metus auctor fringilla.
-                        Vestibulum id ligula porta felis euismod semper.
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.  Fusce dapibus, tellus ac cursus commodo.
-                    </p>
-                    <p>
-                        Donec ullamcorper nulla non metus auctor fringilla.
-                        Vestibulum id ligula porta felis euismod semper.
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.  Fusce dapibus, tellus ac cursus commodo.
-                    </p>
-                    </div>
-                    <div class="col-md-5">
-                        <img class="featurette-image img-responsive circular center-in-span"
-                        src="http://dertien.vlaanderen.be/nlapps/data/docattachments/buren(6).jpg"
-                        data-src="holder.js/250x250/auto"
-                        style="margin-top: 100px;">
-                    </div>
-                </div>
-                <hr class="featurette divider">
-                <div class="row featurette">
-                    <h2 class="featurette-heading">
-                        Massages
-                        <span class="text-muted">
-                            &#8212 voor als ge een beetje vast zit
-                        </span>
-                    </h2>
-                    <p class="lead">
-                        Donec ullamcorper nulla non metus auctor fringilla.
-                        Vestibulum id ligula porta felis euismod semper.
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.  Fusce dapibus, tellus ac cursus commodo.
-                    </p>
-                    <p>
-                        Donec ullamcorper nulla non metus auctor fringilla.
-                        Vestibulum id ligula porta felis euismod semper.
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.  Fusce dapibus, tellus ac cursus commodo.
-                    </p>
-                </div>
-            </div>
+            <div ng-view></div>
 
             <div class="footer">
                 <p>Built by San Gillis</p>
             </div>
-
         </div>
 
         <!-- jQuery -->
         <script src="bower_components/jquery/jquery.min.js"></script>
         <!-- Bootstrap -->
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Angular -->
+        <script src="bower_components/angular/angular.js"></script>
+        <!-- Angular-strap -->
+        <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+        <!-- Own angular -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
     </body>
 </html>
