@@ -11,14 +11,14 @@
         </p>
     </div>
     <hr class="featurette divider">
+    <google-map
+        center="center"
+        zoom="zoomProperty" 
+        markers="markersProperty"
+        latitude="clickedLatitudeProperty"
+        longitude="clickedLongitudeProperty"
+        mark-click="true"
+        draggable="true"
+        style="height: 450px; width: 100%">
+    </google-map>
 </div>
-
-<google-map 
-    center="center"
-    draggable="true"
-    zoom="zoom"
-    markers="markers"
-    mark-click="true"
-    refresh="!isMapElementHidden"
-    style="height: 400px; display: block;">
-</google-map>
